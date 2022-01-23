@@ -13,8 +13,7 @@ jobs:
         flutter-version: '1.22.6'
     - run: flutter pub get
     - run: flutter test
-    - run: rm -rf android/.gradle
-    - run: flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
+    - run: flutter build apk
 
     - name: Create Release
       uses: actions/upload-artifact@v2
